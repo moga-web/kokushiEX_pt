@@ -1,6 +1,6 @@
 name: Test
 on: [push]
-jjobs:
+jobs:
   build:
     runs-on: ubuntu-latest
 
