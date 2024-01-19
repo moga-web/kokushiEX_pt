@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
+  <header class="text-gray-600 body-font grow-1 bg-sky-100 absolute inset-x-0 top-0"><%= render 'layouts/header' %></header>
   <body>
-    <%= render 'layouts/header' %>
     <%= yield %>
-    <%= render 'layouts/footer' %>
   </body>
+  <footer><%= render 'layouts/footer' %></footer>
 </html>
