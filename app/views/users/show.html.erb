@@ -1,13 +1,29 @@
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3 col-12">
-            <div class="card">
-                <div class="card-header">ユーザー一覧</div>
-                <div class="card-body">
-                    u-za
+<div class="flex flex-wrap flex-grow text-gray-600 body-font">
+    <div class="flex flex-col gap-10 m-auto">
+        <!-- 前回のレポートセクション -->
+        <div class="flex">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl">
+                <div class="m-5">
+                    <h2>前回のレポート</h2>
                 </div>
-                <div class="card-footer">
-                    
+            </div>
+        </div>
+
+        <!-- 学習進捗セクション -->
+        <div class="flex">
+            <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl">
+                <div class="m-5">
+                    <h2>学習進捗</h2>
+                    <div class="flex flex-wrap gap-20">
+                        <div class="flex flex-col items-center">
+                            <h3>受験済みのテスト</h3>
+                            <%= image_tag 'circle1.png', size: 150 %>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <h3>合格点超えのテスト</h3>
+                            <%= image_tag 'circle2.png', size: 150 %>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
