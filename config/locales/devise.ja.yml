@@ -57,6 +57,14 @@ ja:
       send_instructions: "数分以内にアカウントのアンロック方法についての指示が記載されたメールが送信されます。"
       send_paranoid_instructions: "アカウントが存在する場合、数分以内にアカウントのアンロック方法についての指示が記載されたメールが送信されます。"
       unlocked: "アカウントは正常にアンロックされました。続行するにはサインインしてください。"
+    shared:
+      links:
+        log_in: "ログイン"
+        sign_up: "サインアップ"
+        forgot_password: "パスワードを忘れた場合"
+        didnt_receive_confirmation_instructions: "確認指示が届かない場合"
+        didnt_receive_unlock_instructions: "アンロック指示が届かない場合"
+        sign_in_with_provider: "%{provider}でサインイン"
   errors:
     messages:
       already_confirmed: "はすでに確認されています。サインインを試みてください"
