@@ -8,17 +8,19 @@
       <div>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t('devise.sessions.new.email'), class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm sm:leading-5" %>
       </div>
-
       <div>
         <%= f.password_field :password, autocomplete: "current-password", placeholder: t('devise.sessions.new.password'), class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm sm:leading-5" %>
       </div>
     </div>
 
     <% if devise_mapping.rememberable? %>
-      <div class="flex items-center justify-between">
+      <div class="flex justify-between items-center">
         <div class="flex items-center">
           <%= f.check_box :remember_me, class: "h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" %>
           <%= f.label :remember_me, t('devise.sessions.new.remember_me'), class: "ml-2 block text-sm leading-5 text-gray-900" %>
+        </div>
+        <div class="text-sm font-semibold text-indigo-600 hover:text-orange-300">
+          <%= link_to t('devise.shared.links.forgot_password'), new_password_path(resource_name) %>
         </div>
       </div>
     <% end %>
@@ -27,9 +29,4 @@
       <%= f.submit t('devise.sessions.new.submit'), class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
     </div>
   <% end %>
-  <div class="mt-10 text-center text-sm text-gray-500 font-semibold leading-6" >
-      <%= render "devise/shared/links" %>
-  </div>
 </div>
-
-
