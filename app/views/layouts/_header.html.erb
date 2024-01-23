@@ -7,7 +7,7 @@
         <a class="mr-5 ">トップ</a>
         <a class="mr-5 ">ダッシュボード</a>
         <a class="mr-5 ">過去問演習</a>
-        
+
         <% if user_signed_in? %>
             <div class="hover:text-orange-300"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %></div>
         <% else %>
