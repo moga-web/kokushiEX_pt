@@ -71,8 +71,20 @@ ja:
         username: "ユーザー名"
         email: "メールアドレス"
         password: "パスワード"
+        minimum_password_length: "パスワードは６文字以上で設定してください"
         password_confirmation: "パスワードの確認"
         submit: "会員登録する"
+      edit:
+        title: "会員情報"
+        username: "ユーザー名"
+        email: "メールアドレス"
+        password: "新しいパスワード"
+        password_confirmation: "新しいパスワードの確認"
+        password_precaution: "パスワードを変更する場合のみ入力してください"
+        minimum_password_length: "パスワードは６文字以上で設定してください"
+        current_password: "現在のパスワード"
+        current_password_reason: "変更内容を確認するため、現在のパスワードを入力してください"
+        submit: "会員情報を更新する"
     passwords:
       new:
         title: "パスワードの変更"
