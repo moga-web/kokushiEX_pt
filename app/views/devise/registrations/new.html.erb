@@ -8,6 +8,10 @@
 
     <div class="rounded-md shadow-sm space-y-4">
       <div>
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: t('devise.registrations.new.username'), class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm sm:leading-5" %>
+      </div>
+
+      <div>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t('devise.registrations.new.email'), class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm sm:leading-5" %>
       </div>
 

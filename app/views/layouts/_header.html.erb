@@ -3,10 +3,15 @@
         <%= image_tag 'logo.png',size: 50 %>
         <span class="ml-3 text-xl">国試ex for PT</span>
     </a>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-orange-300">トップ</a>
-        <a class="mr-5 hover:text-orange-300">ダッシュボード</a>
-        <a class="mr-5 hover:text-orange-300">過去問演習</a>
-        <a class="mr-5 hover:text-orange-300">マイページ</a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center mr-5">
+        <a class="mr-5 ">トップ</a>
+        <a class="mr-5 ">ダッシュボード</a>
+        <a class="mr-5 ">過去問演習</a>
+        
+        <% if user_signed_in? %>
+            <div class="hover:text-orange-300"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %></div>
+        <% else %>
+          <a class="mr-5 ">マイページ</a>
+        <% end %>
     </nav>
 </div>
