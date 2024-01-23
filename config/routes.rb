@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'users#show'
+  root 'home#index'
 end
