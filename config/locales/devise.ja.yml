@@ -65,6 +65,20 @@ ja:
         didnt_receive_confirmation_instructions: "確認指示が届かない場合"
         didnt_receive_unlock_instructions: "アンロック指示が届かない場合"
         sign_in_with_provider: "%{provider}でサインイン"
+    registrations:
+      new:
+        title: "無料会員登録"
+        username: "ユーザー名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワードの確認"
+        submit: "会員登録する"
+    passwords:
+      new:
+        title: "パスワードの変更"
+        description: "下記メールアドレスにパスワードの変更方法を送信します。"
+        email: "メールアドレス"
+        submit: "パスワードを変更する"
   errors:
     messages:
       already_confirmed: "はすでに確認されています。サインインを試みてください"
