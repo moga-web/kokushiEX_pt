@@ -39,3 +39,6 @@ Naming/PredicateName:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
