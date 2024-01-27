@@ -18,7 +18,7 @@ jobs:
         gem install bundler
         bundle install
 
-    - name: RuboCop Lint
+    - name: RuboCop
       run: bundle exec rubocop
 
     - name: ERBLint
