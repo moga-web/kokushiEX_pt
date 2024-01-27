@@ -24,6 +24,7 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
+gem 'cssbundling-rails'
 gem 'tailwindcss-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -61,7 +62,9 @@ group :development do
   gem 'better_errors'
   gem 'erb_lint', require: false
   gem 'rubocop'
+  gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

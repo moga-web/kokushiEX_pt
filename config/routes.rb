@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'users#show'
+  root 'home#index'
+  get '/dashbord' => 'dashbord#index'
 end

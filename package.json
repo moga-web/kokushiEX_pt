@@ -1,0 +1,13 @@
+{
+  "name": "kokushiEX_pt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/moga-web/kokushiEX_pt",
+  "author": "moga_web",
+  "license": "MIT",
+  "description": "package for tailwind",
+  "private": false,
+  "scripts": {
+    "build:css": "tailwindcss -o ./app/javascript/stylesheets/application.tailwind.css --minify"
+  }
+}

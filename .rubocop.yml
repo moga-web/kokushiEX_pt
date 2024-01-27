@@ -2,6 +2,9 @@ inherit_from: .rubocop_todo.yml
 
 require:
   - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
 
 # This file overrides https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
@@ -39,3 +42,6 @@ Naming/PredicateName:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
