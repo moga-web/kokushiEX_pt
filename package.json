@@ -8,6 +8,6 @@
   "description": "package for tailwind",
   "private": false,
   "scripts": {
-    "build:css": "tailwindcss -o ./path/to/output.css --minify"
+    "build:css": "tailwindcss -o ./app/javascript/stylesheets/application.tailwind.css --minify"
   }
 }
