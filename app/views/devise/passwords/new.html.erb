@@ -1,16 +1,30 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="flex flex-grow min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900"><%= t('devise.passwords.new.title') %></h2>
+    <p class="mt-4 text-center text-sm text-gray-600 max-w">
+      <%= t('devise.passwords.new.description') %>
+    </p>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "mt-8 space-y-6 sm:mx-auto sm:w-full sm:max-w-md" }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= render "devise/shared/links" %>
+    <div class="rounded-md shadow-sm space-y-4">
+      <div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:t('devise.passwords.new.email'), class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10 sm:text-sm sm:leading-5" %>
+      </div>
+    </div>
+
+    <div class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md text-sky-500 bg-stone-100 hover:bg-sky-500 hover:text-neutral-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+      <%= f.submit t('devise.passwords.new.submit') %>
+    </div>
+  <% end %>
+  <div class="flex justify-center px-6 py-5 lg:px-8">
+    <div class="font-semibold text-sky-500 hover:text-orange-300 mx-5">
+      <%= link_to t('devise.shared.links.log_in'), new_session_path(resource_name) %>
+    </div>
+    <div class="font-semibold text-sky-500 hover:text-orange-300">
+      <%= link_to t('devise.shared.links.sign_up'), new_registration_path(resource_name) %>
+    </div>
+  </div>
+</div>
