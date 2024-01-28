@@ -12,8 +12,10 @@
         </div>
         <!-- パスができたら修正 -->
         <div class="mr-5 hover:text-orange-300">
-            <a class="mr-5 hover:text-orange-300">過去問演習</a>
-            <a class="mr-5 hover:text-orange-300">マイページ</a>
+            <%= link_to '過去問演習', root_path %>
+        </div>
+        <div class="mr-5 hover:text-orange-300">
+            <%= link_to 'マイページ', edit_user_registration_path %>
         </div>
     </nav>
 </div>
