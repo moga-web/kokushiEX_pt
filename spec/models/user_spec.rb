@@ -23,5 +23,39 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:user) { build(:user) }
+
+  context '正常系' do
+    it 'ユーザー登録ができる' do
+      expect(user).to be_valid
+    end
+  end
+
+  context 'バリデーション' do
+    it 'ユーザー名が空だと登録できない' do
+      user.username = nil
+      expect(user).not_to be_valid
+    end
+
+    it 'メールアドレスが空だと登録できない' do
+      user.email = nil
+      expect(user).not_to be_valid
+    end
+
+    it 'メールアドレスが重複していると登録できない' do
+      user.save
+      another_user = build(:user, email: user.email)
+      expect(another_user).not_to be_valid
+    end
+
+    it 'パスワードが空だと登録できない' do
+      user.password = nil
+      expect(user).not_to be_valid
+    end
+
+    it 'パスワードが6文字未満だと登録できない' do
+      user.password = 'abc'
+      expect(user).not_to be_valid
+    end
+  end
 end
