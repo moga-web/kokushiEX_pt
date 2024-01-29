@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 形状に関連するスタイル */
+.form-input-base {
+  @apply appearance-none rounded-none relative block w-full px-3 py-2 border sm:text-sm sm:leading-5;
+}
+
+.button-base {
+  @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md;
+}
+
+.link-base {
+  @apply mx-5 font-semibold;
+}
+
+.title-base {
+  @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
+}
+
+/* 色に関連するスタイル */
+.form-input-color {
+  @apply text-gray-900 placeholder-gray-500 border-gray-300;
+}
+
+.button-color {
+  @apply text-sky-500 bg-stone-100 hover:bg-sky-500 hover:text-neutral-50;
+}
+
+.link-color {
+  @apply text-sky-600 hover:text-orange-300;
+}
+
+/* 特定の状態に関連するスタイル */
+.focus-ring {
+  @apply focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10;
+}
+
+.focus-button-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500;
+}
+
 /*
 
 @layer components {
