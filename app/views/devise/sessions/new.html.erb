@@ -3,8 +3,8 @@
     <h2 class="title-base"><%= t('devise.sessions.new.title') %></h2>
   </div>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name),
-                         html: { class: 'mt-8 space-y-6 sm:mx-auto sm:w-full sm:max-w-md' }) do |f| %>
+  <%= form_with(model: resource, as: resource_name, url: session_path(resource_name),
+                local: true, html: { class: 'mt-8 space-y-6 sm:mx-auto sm:w-full sm:max-w-md' }) do |f| %>
     <div class="rounded-md shadow-sm space-y-4">
       <div>
         <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: t('devise.sessions.new.email'),
