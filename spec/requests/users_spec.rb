@@ -56,28 +56,42 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "GET /users/edit" do
+    let(:user) { create(:user) }
     before do
-      user = FactoryBot.create(:user)
-      sign_in user
+      login_as(user, scope: :user)
     end
-    it "ユーザー編集画面が表示される" do
+    it "登録情報編集画面が表示される" do
       get edit_user_registration_path
       expect(response).to have_http_status(:success)
     end
   end
 
   describe "PATCH /users/edit" do
+    let(:user) { create(:user, password: 'password', password_confirmation: 'password') }
+    
     before do
-      @user = create(:user)
-      login_as(@user, scope: :user)
+      login_as(user, scope: :user)
     end
-
+  
     it "ユーザー情報が更新される" do
-      patch user_registration_path, params: { user: { email: 'updated@example.com' } }
-      expect(response).to redirect_to(edit_user_registration_path) 
-      expect(@user.reload.email).to eq 'updated@example.com'
+      updated_params = {
+        user: {
+          username: 'UpdatedUser', # ユーザー名も更新する
+          email: 'updated@example.com',
+          current_password: 'password', # 現在のパスワードを含める
+          password: 'newpassword', # 新しいパスワード
+          password_confirmation: 'newpassword' # 新しいパスワードの確認
+        }
+      }
+      patch user_registration_path, params: updated_params
+  
+      expect(response).to redirect_to(edit_user_registration_path)
+      user.reload
+      expect(user.email).to eq 'updated@example.com'
+      expect(user.username).to eq 'UpdatedUser'
     end
   end
+  
 end
 
 
