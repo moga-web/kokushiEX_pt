@@ -38,7 +38,6 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "POST /users/sign_in" do
-    # ここでユーザーを作成
     let!(:user) { create(:user, email: 'user@example.com', password: 'password') }
 
     context '正常系' do
@@ -57,6 +56,10 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "GET /users/edit" do
+    before do
+      user = FactoryBot.create(:user)
+      sign_in user
+    end
     it "ユーザー編集画面が表示される" do
       get edit_user_registration_path
       expect(response).to have_http_status(:success)
@@ -64,13 +67,17 @@ RSpec.describe "Users", type: :request do
   end
 
   describe "PATCH /users/edit" do
+    before do
+      @user = create(:user)
+      login_as(@user, scope: :user)
+    end
+
     it "ユーザー情報が更新される" do
-      user = create(:user)
-      login_as(user)
       patch user_registration_path, params: { user: { email: 'updated@example.com' } }
       expect(response).to redirect_to(edit_user_registration_path) 
-      expect(user.reload.email).to eq 'updated@example.com'
+      expect(@user.reload.email).to eq 'updated@example.com'
     end
   end
 end
+
 

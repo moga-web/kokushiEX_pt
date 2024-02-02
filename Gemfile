@@ -59,6 +59,7 @@ group :development, :test do
   gem 'faker'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
