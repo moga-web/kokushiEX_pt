@@ -28,7 +28,7 @@ class Users::SessionsController < Devise::SessionsController
     dashbord_path(resource)
   end
 
-  def after_sign_out_path_for(resource)
+  def after_sign_out_path_for(_resource)
     root_path
   end
 end
