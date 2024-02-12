@@ -18,4 +18,8 @@
 #  question_id  (question_id => questions.id)
 #
 class Choice < ApplicationRecord
+    belogs_to :question
+
+    validates :content, presence: true
+    validates :is_correct, inclusion: { in: [true, false] }
 end
