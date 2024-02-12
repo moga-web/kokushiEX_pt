@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_27_122725) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_12_041555) do
+  create_table "choices", force: :cascade do |t|
+    t.integer "question_id", null: false
+    t.string "content", null: false
+    t.boolean "is_correct", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_choices_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.integer "test_id", null: false
+    t.text "content", null: false
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.integer "year", null: false
+    t.string "session", null: false
+    t.integer "pass_mark", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "email", default: "", null: false
@@ -27,4 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_27_122725) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "choices", "questions"
+  add_foreign_key "questions", "tests"
 end
