@@ -18,8 +18,8 @@
 #  test_id  (test_id => tests.id)
 #
 class Question < ApplicationRecord
-    belogs_to :test
-    has_many :choices, dependent: :destroy
-    
-    validates :content, presence: true
+  belogs_to :test
+  has_many :choices, dependent: :destroy
+
+  validates :content, presence: true
 end
