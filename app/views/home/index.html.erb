@@ -5,7 +5,11 @@
             <div class='flex items-center justify-center h-full'>
                 <div class='text-center'>
                     <h1 class='text-4xl font-bold'>理学療法士国家試験をスマートに合格しよう</h1>
-                    <%= button_to 'ログイン', {}, { class: 'rounded-full border-gray-900 mt-4' } %>
+                    <div class='flex justify-center mt-4'>
+                        <div class='bg-stone-100 text-sky-500 hover:bg-sky-500 hover:text-neutral-50 font-bold py-2 px-4 rounded-full shadow-xl mt-4'>
+                            <%= link_to 'ログイン', new_user_session_path %>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,7 +35,9 @@
                         </div>
                     </div>
                     <div class='flex justify-center mt-4'>
-                        <%= button_to '無料会員登録', {}, { class: 'rounded-full border-gray-900' } %>
+                        <div class='bg-stone-100 text-sky-500 hover:bg-sky-500 hover:text-neutral-50 font-bold py-2 px-4 rounded-full shadow-xl mt-4'>
+                            <%= link_to '無料会員登録', new_user_registration_path %>
+                        </div>
                     </div>
                 </div>
             </div>

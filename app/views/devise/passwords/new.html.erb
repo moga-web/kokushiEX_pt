@@ -1,0 +1,32 @@
+<div class="flex flex-grow min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900"><%= t('devise.passwords.new.title') %></h2>
+    <p class="mt-4 text-center text-sm text-gray-600 max-w">
+      <%= t('devise.passwords.new.description') %>
+    </p>
+  </div>
+
+  <%= form_with(model: resource, as: resource_name, url: password_path(resource_name),
+                local: true, html: { method: :post, class: 'mt-8 space-y-6 sm:mx-auto sm:w-full sm:max-w-md' }) do |f| %>
+    <%= render 'devise/shared/error_messages', resource: %>
+
+    <div class="rounded-md shadow-sm space-y-4">
+      <div>
+        <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: t('devise.passwords.new.email'),
+                                  class: 'form-input-base form-input-color focus-ring' %>
+      </div>
+    </div>
+
+    <div class="button-base button-color focus-button-ring">
+      <%= f.submit t('devise.passwords.new.submit') %>
+    </div>
+  <% end %>
+  <div class="flex justify-center px-6 py-5 lg:px-8">
+    <div class="link-base link-color  ">
+      <%= link_to t('devise.shared.links.log_in'), new_session_path(resource_name) %>
+    </div>
+    <div class="link-base link-color ">
+      <%= link_to t('devise.shared.links.sign_up'), new_registration_path(resource_name) %>
+    </div>
+  </div>
+</div>

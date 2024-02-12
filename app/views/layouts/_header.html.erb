@@ -12,8 +12,20 @@
         </div>
         <!-- パスができたら修正 -->
         <div class="mr-5 hover:text-orange-300">
-            <a class="mr-5 hover:text-orange-300">過去問演習</a>
-            <a class="mr-5 hover:text-orange-300">マイページ</a>
+            <%= link_to '過去問演習', root_path %>
         </div>
+        <!-- パスができたら修正 -->
+        <% if user_signed_in? %>
+            <div class="mr-5 hover:text-orange-300">
+                <%= button_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+            </div>
+            <div class="mr-5 hover:text-orange-300">
+                <%= link_to 'マイページ', edit_user_registration_path %>
+            </div>
+        <% else %>
+            <div class="mr-5 hover:text-orange-300">
+                <%= link_to 'ログイン', new_user_session_path %>
+            </div>
+        <% end %>
     </nav>
 </div>
