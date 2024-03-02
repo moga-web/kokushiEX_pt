@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get '/dashbord' => 'dashbord#index'
+  namespace :tests do
+    get 'selections/index'
+  end
+  get 'tests/show'
 end

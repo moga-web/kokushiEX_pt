@@ -1,0 +1,146 @@
+<div class='flex flex-wrap flex-grow text-gray-600 body-font'>
+    <div class='w-full max-w-4xl m-auto'>
+        <!-- 年度選択セクション -->
+        <div class='flex mb-10'>
+          <div class='w-full h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl'>
+            <div class='m-5'>
+              <a class='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'>
+                <%= image_tag 'calender.png', size: 50 %>
+                <span class='ml-3 text-xl'>年度から選択</span>
+              </a>
+              <div class='flex flex-wrap py-2 space-x-4 space-y-4'>
+                <div class='year-select'>
+                  <%= link_to '第49回（2014年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第50回（2015年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第51回（2016年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第52回（2017年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第53回（2018年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第54回（2019年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第55回（2020年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第56回（2021年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第57回（2022年度）', new_user_registration_path %>
+                </div>
+                <div class='year-select'>
+                  <%= link_to '第58回（2023年度）', new_user_registration_path %>
+                </div>
+              </div>
+              <div class='flex justify-center'>
+                <div class='select-tag '>
+                  <%= link_to 'テストを始める', new_user_registration_path %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--タグ選択セクション -->
+        <div class='flex'>
+            <div class='w-full h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-xl'>
+                <div class='m-5'>
+                    <a class='flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0'>
+                      <%= image_tag 'tag.png', size: 50 %>
+                      <span class='ml-3 text-xl'>タグから選択</span>
+                    </a>
+                    <div class='flex flex-wrap py-2 space-x-4 space-y-4'>
+                      <!--共通問題タグ -->
+                      <div>
+                        <div class='tag-common'>
+                          <%= link_to '解剖学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '生理学・病理学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '運動学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '人間発達学・小児科学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '内科学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '臨床神経医学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '臨床心理学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '精神医学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to '整形外科学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-common'>
+                          <%= link_to 'リハビリテーション総論', new_user_registration_path %>
+                        </div>
+                      </div>
+                      <!--専門問題タグ -->
+                      <div>
+                        <div class='tag-specialized'>
+                          <%= link_to '生体力学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '運動療法', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '物理療法', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '理学療法評価学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '内科疾患', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '小児科学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '整形外科学', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '脳血管疾患', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '神経・筋障害', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '脊髄損傷', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '補装具療法', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to 'ADL', new_user_registration_path %>
+                        </div>
+                        <div class='tag-specialized'>
+                          <%= link_to '理学療法概論', new_user_registration_path %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='flex justify-center'>
+                      <div class='select-tag'>
+                        <%= link_to 'テストを始める', new_user_registration_path %>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
