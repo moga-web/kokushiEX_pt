@@ -2,51 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 形状に関連するスタイル */
-.form-input-base {
-  @apply appearance-none rounded-none relative block w-full px-3 py-2 border sm:text-sm sm:leading-5;
-}
-
-.button-base {
-  @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md;
-}
-
-.link-base {
-  @apply mx-5 font-semibold;
-}
-
-.title-base {
-  @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
-}
-
-/* 色に関連するスタイル */
-.form-input-color {
-  @apply text-gray-900 placeholder-gray-500 border-gray-300;
-}
-
-.button-color {
-  @apply text-sky-500 bg-stone-100 hover:bg-sky-500 hover:text-neutral-50;
-}
-
-.link-color {
-  @apply text-sky-600 hover:text-orange-300;
-}
-
-/* 特定の状態に関連するスタイル */
-.focus-ring {
-  @apply focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10;
-}
-
-.focus-button-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500;
-}
-
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  /* 形状に関連するスタイル */
+  .form-input-base {
+    @apply appearance-none rounded-none relative block w-full px-3 py-2 border sm:text-sm sm:leading-5;
+  }
+
+  .button-base {
+    @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-bold rounded-md;
+  }
+
+  .link-base {
+    @apply mx-5 font-semibold;
+  }
+
+  .title-base {
+    @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
+  }
+
+  /* 色に関連するスタイル */
+  .form-input-color {
+    @apply text-gray-900 placeholder-gray-500 border-gray-300;
+  }
+
+  .button-color {
+    @apply text-sky-500 bg-stone-100 hover:bg-sky-500 hover:text-neutral-50;
+  }
+
+  .start-button-color {
+    @apply text-sky-500 bg-stone-50 hover:bg-green-500 hover:text-stone-50  border-gray-200;
+  }
+
+  .link-color {
+    @apply text-sky-600 hover:text-orange-300;
+  }
+
+  /* 特定の状態に関連するスタイル */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10;
+  }
+
+  .focus-button-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500;
+  }
+
+  /* 年度選択のスタイル */
+  .year-select {
+    @apply button-base text-sky-500 bg-stone-50 hover:bg-sky-500 hover:text-stone-50  border-gray-200 font-normal drop-shadow-lg text-center w-1/5 rounded-full;
+  }
+
+  /* タグ選択のスタイル */
+  .tag-common {
+    @apply bg-slate-50 hover:bg-purple-600 hover:text-slate-50 text-purple-600 font-normal py-2 px-4 rounded-full drop-shadow-lg mt-4 inline-block rounded-md;
+  }
+
+  .tag-specialized {
+    @apply bg-slate-50 hover:bg-pink-500 hover:text-slate-50 text-pink-500 font-normal py-2 px-4 rounded-full drop-shadow-lg mt-4 inline-block rounded-md;
+  }
+
+  .select-tag {
+    @apply button-base bg-slate-50 text-green-500 hover:bg-green-500 hover:text-slate-50 w-1/5 drop-shadow-lg;
   }
 }
 
-*/

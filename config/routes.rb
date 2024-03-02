@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   namespace :tests do
     get 'selections/index'
   end
+  get 'tests/show'
 end
