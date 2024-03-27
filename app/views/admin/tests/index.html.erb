@@ -1,0 +1,17 @@
+<div>
+    <%= form_with url: import_admin_tests_path, local: true, multipart: true do |form| %>
+        <%= form.file_field :file %>
+        <%= form.submit 'インポート', class: 'button-base text-sky-500 bg-gray-500 focus-button-ring' %>
+    <% end %>
+</div>
+
+<div>
+    <% @tests.each do |test| %>
+        <tr>
+            <td><%= @test.name %></td>
+            <td><%= @test.score %></td>
+            <td><%= @test.date %></td>
+        </tr>
+    <% end %>
+
+</div>
